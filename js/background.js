@@ -4,6 +4,7 @@ const chosenImage = images[Math.floor(Math.random() * images.length)];
 
 const bgimage = document.createElement("img");
 bgimage.src = `img/${chosenImage}`;
+bgimage.id = "bg";
 
 document.body.appendChild(bgimage)
 // appendChild - 요소의 맨 마지막에 추가

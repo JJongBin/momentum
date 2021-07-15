@@ -24,10 +24,16 @@ function deleteTodo(event) {
 function paintToDo(newTodo) {
     const li = document.createElement("li");
     li.id = newTodo.id;
+
     const span = document.createElement("span");
     span.innerText = newTodo.text;
+
     const button = document.createElement("button")
-    button.innerText = "❌";
+    // const close = document.createElement("span")
+    // close.classList.add("material-icons");
+    // close.innerText = "close";
+    // button.appendChild(close);
+    button.innerText = "del";
 
     button.addEventListener("click", deleteTodo);
 

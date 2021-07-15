@@ -15,11 +15,22 @@ function onLoginSubmit(event) {
     localStorage.setItem(USERNAME_KEY, username);
 
     paintGreetings(username);
+
 }
 
 function paintGreetings(username) {
-    greeting.innerText = `Hello ${username}`;
+    greeting.innerText = `Hello "${username}"`;
     greeting.classList.remove(HIDDEN_CLASSNAME);
+    showTodos()
+    showLogout()
+}
+function showTodos() {
+    const todos = document.querySelector("#todo-form");
+    todos.classList.remove("hidden");
+}
+function showLogout() {
+    const logout = document.querySelector("#logout");
+    logout.classList.remove("hidden");
 }
 
 

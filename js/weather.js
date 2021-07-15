@@ -13,7 +13,7 @@ function onGeoOk(position){
     // then()을 사용하는 이유 -> 자바스크립트는 비동기처리 방식으로 작동되는데 만약 특정 동작이 끝나지도 않고 다음 동작을 실행하게 됬을때 오류를 방지하기 위함
     fetch(url).then(response => response.json())
     .then(data => {
-        const weather = document.querySelector("#weather span:first-child");
+        const weather = document.querySelector("#weather span:nth-child(2)");
         const city = document.querySelector("#weather span:last-child");
         
         weather.innerText = `${data.weather[0].main} / ${data.main.temp}`;
