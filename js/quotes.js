@@ -42,13 +42,20 @@ const quotes = [
 ]
 
 function handleCloseQuote() {
-    quoteBox.classList.add("hidden");
-    quoteBoxOpen.classList.remove("hidden");
+    quoteBox.classList.add("quote-down");
+    setTimeout(function() {
+        quoteBox.classList.add("hidden");
+        quoteBoxOpen.classList.remove("hidden");
+    }, 400);
+
+    quoteBox.classList.remove("quote-up");
 }
 function handleOpenQuote() {
+    quoteBox.classList.add("quote-up");
     quoteBox.classList.remove("hidden");
-    quoteBox.classList.add("quote-ani");
     quoteBoxOpen.classList.add("hidden");
+
+    quoteBox.classList.remove("quote-down");
 }
 
 

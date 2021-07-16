@@ -10,7 +10,6 @@ body{
 /* COMMON */
 .hidden {
     display: none !important;
-    transition: all 1s;
 }
 .inner{
     width: 60%;
@@ -42,12 +41,28 @@ body{
 
 
 /* ANIMATION */
-.quote-ani{
-    animation: my-quote-ani 0.8 ease-in-out;
+.quote-up{
+    animation: my-quote-up 0.5s ease-in-out;
 }
-@keyframes my-quote-ani{
-    from{height: 0px;}
-    to{height: 100px;}
+.quote-down{
+    animation: my-quote-down 0.5s ease-in-out;
+}
+@keyframes my-quote-up{
+    from{
+        transform: translateY(100px);
+    }
+    to{
+        transform: none;
+    }
+}
+@keyframes my-quote-down{
+    from{
+        transform: none;
+    }
+    to{
+        transform: translateY(100px);
+    }
+    
 }
 
 
@@ -226,12 +241,10 @@ body{
     width: 50%;   
     background-color: rgba(200, 200, 200, 0.15);
     border-radius: 10px 10px 0 0;
-    padding-bottom: 5px;
     margin-left: -25%;
 }
 #quote-open span{
     display: block;
-    padding: 3px;
     text-align: center;
     padding: 1px;
     background-color: rgba(255, 255, 255, 0.15);
