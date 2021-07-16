@@ -41,6 +41,16 @@ body{
 }
 
 
+/* ANIMATION */
+.quote-ani{
+    animation: my-quote-ani 0.8 ease-in-out;
+}
+@keyframes my-quote-ani{
+    from{height: 0px;}
+    to{height: 100px;}
+}
+
+
 
 /* CLOCK */
 #clock{
@@ -95,7 +105,7 @@ body{
 #greeting{
     text-align: center;
     margin-top: 0;
-    color: rgb(150, 150, 150);
+    color: rgb(180, 180, 180);
 }
 
 
@@ -126,12 +136,23 @@ body{
 .todo-box{
     width: 80%;
     padding: 10px;
-    border-radius: 20px;
+    border-radius: 10px;
     background-color: rgba(200, 200, 200, 0.3);
     max-height: 350px;
-    overflow: scroll;
+    overflow: auto;
     margin: 30px auto;
 }
+.todo-box::-webkit-scrollbar{
+    background-color: rgba(200, 200, 200, 0.3);
+    border-radius: 10px;
+}
+.todo-box::-webkit-scrollbar-thumb{
+    background-color: rgba(255, 255, 255, .4);
+    border-radius: 10px;
+    background-clip: padding-box;
+    border: 3px solid transparent;
+}
+
 #todo-list{
     /* list-style: decimal; */
     padding: 0 20px;
@@ -172,7 +193,6 @@ body{
     bottom: 0;
     left: 50%;
     width: 50%;   
-    /* margin: 0 auto; */
     background-color: rgba(200, 200, 200, 0.15);
     border-radius: 10px 10px 0 0;
     padding-bottom: 20px;
@@ -196,6 +216,31 @@ body{
 }
 #quote span:nth-child(2){
     padding-top: 20px;
+}
+
+#quote-open{
+    font-size: 13px;
+    position: absolute;
+    bottom: 0;
+    left: 50%;
+    width: 50%;   
+    background-color: rgba(200, 200, 200, 0.15);
+    border-radius: 10px 10px 0 0;
+    padding-bottom: 5px;
+    margin-left: -25%;
+}
+#quote-open span{
+    display: block;
+    padding: 3px;
+    text-align: center;
+    padding: 1px;
+    background-color: rgba(255, 255, 255, 0.15);
+    border-radius: 10px;
+    cursor: pointer;
+    transition: background-color .3s;
+}
+#quote-open span:first-child:hover{
+    background-color: rgba(255, 255, 255, 0.3);
 }
 
 

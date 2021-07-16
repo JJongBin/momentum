@@ -41,6 +41,21 @@ const quotes = [
     },
 ]
 
+function handleCloseQuote() {
+    quoteBox.classList.add("hidden");
+    quoteBoxOpen.classList.remove("hidden");
+}
+function handleOpenQuote() {
+    quoteBox.classList.remove("hidden");
+    quoteBox.classList.add("quote-ani");
+    quoteBoxOpen.classList.add("hidden");
+}
+
+
+const quoteBox = document.querySelector("#quote");
+const quoteBoxOpen = document.querySelector("#quote-open")
+
+const closeQuote = document.querySelector("#quote span:first-child");
 const quote = document.querySelector("#quote span:nth-child(2)");
 const author = document.querySelector("#quote span:last-child");
 
@@ -50,3 +65,11 @@ const todaysQuote = quotes[Math.floor(Math.random() * quotes.length)];
 quote.innerText = todaysQuote.quote;
 author.innerText = todaysQuote.author;
 
+closeQuote.addEventListener("click", handleCloseQuote);
+console.log(closeQuote)
+
+// QUOTE OPEN
+
+const openQuote = document.querySelector("#quote-open");
+
+openQuote.addEventListener("click", handleOpenQuote);
