@@ -32,7 +32,7 @@ body{
     left: 0;
     z-index: -2;
     width: 100%;
-    height: auto;
+    height: 100vh;
     object-fit: cover;
 }
 .material-icons{
@@ -69,10 +69,10 @@ body{
 
 /* CLOCK */
 #clock{
-    font-size: 100px;
-    color: rgb(200, 200, 200);
+    font-size: 130px;
+    color: rgb(240, 240, 240);
     margin-top: 15%;
-    margin-bottom: 10px;
+    margin-bottom: 0;
     text-align: center;
 }
 
@@ -118,9 +118,10 @@ body{
 
 /* GREETING */
 #greeting{
+    font-size: 50px;
     text-align: center;
     margin-top: 0;
-    color: rgb(180, 180, 180);
+    color: rgb(240, 240, 240);
 }
 
 
@@ -173,20 +174,24 @@ body{
     padding: 0 20px;
 }
 #todo-list li{
-    margin: 3px 0;
+    /* margin: 3px 0; */
+    padding: 5px 10px;
     height: 30px;
     display: flex;
     align-items: center;
     position: relative;
     border-bottom: 1px solid rgba(200, 200, 200, 0.5);
-    
+}
+#todo-list li:nth-child(n):hover{
+    background-color: rgba(255, 255, 255, 0.2);
+    border-radius: 10px;
 }
 
 #todo-list li button{
     font-size: 13px;
     width: 50px;
     position: absolute;
-    right: 0;
+    right: 10px;
     color: #fff;
     height: 20px;
     border-radius: 15px;
@@ -203,14 +208,14 @@ body{
 
 /* QUOTE */
 #quote{
-    font-size: 13px;
+    font-size: 15px;
     position: absolute;
     bottom: 0;
     left: 50%;
     width: 50%;   
-    background-color: rgba(200, 200, 200, 0.15);
+    /* background-color: rgba(200, 200, 200, 0.15); */
     border-radius: 10px 10px 0 0;
-    padding-bottom: 20px;
+    padding-bottom: 10px;
     margin-left: -25%;
 }
 #quote span{
@@ -219,18 +224,25 @@ body{
     text-align: center;
 }
 #quote span:first-child{
-    display: block;
+    /* display: inline; */
+    display: flex;
+    justify-content: center;
+    margin: 0 auto;
     padding: 1px;
-    background-color: rgba(255, 255, 255, 0.15);
-    border-radius: 10px;
+    font-size: 40px !important;
+    opacity: .6;
+    /* background-color: rgba(255, 255, 255, 0.15); */
+    /* border-radius: 10px; */
     cursor: pointer;
     transition: background-color .3s;
 }
 #quote span:first-child:hover{
-    background-color: rgba(255, 255, 255, 0.3);
+    opacity: 1;
+    /* background-color: rgba(255, 255, 255, 0.3); */
+
 }
 #quote span:nth-child(2){
-    padding-top: 20px;
+    padding-top: 10px;
 }
 
 #quote-open{
@@ -239,7 +251,7 @@ body{
     bottom: 0;
     left: 50%;
     width: 50%;   
-    background-color: rgba(200, 200, 200, 0.15);
+    /* background-color: rgba(200, 200, 200, 0.15); */
     border-radius: 10px 10px 0 0;
     margin-left: -25%;
 }
@@ -247,13 +259,16 @@ body{
     display: block;
     text-align: center;
     padding: 1px;
-    background-color: rgba(255, 255, 255, 0.15);
+    font-size: 40px !important;
+    opacity: .6;
+    /* background-color: rgba(255, 255, 255, 0.15); */
     border-radius: 10px;
     cursor: pointer;
     transition: background-color .3s;
 }
 #quote-open span:first-child:hover{
-    background-color: rgba(255, 255, 255, 0.3);
+    opacity: 1;
+    /* background-color: rgba(255, 255, 255, 0.3); */
 }
 
 

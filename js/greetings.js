@@ -19,14 +19,16 @@ function onLoginSubmit(event) {
 }
 
 function paintGreetings(username) {
-    greeting.innerText = `Hello "${username}"`;
+    greeting.innerText = `Hello,  ${username}`;
     greeting.classList.remove(HIDDEN_CLASSNAME);
     showTodos()
     showLogout()
 }
 function showTodos() {
     const todos = document.querySelector("#todo-form");
+    const todoBox = document.querySelector(".todo-box");
     todos.classList.remove("hidden");
+    todoBox.classList.remove("hidden");
 }
 function showLogout() {
     const logout = document.querySelector("#logout");
